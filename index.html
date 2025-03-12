@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес - Вход</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">Фитнес</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h1>Добро пожаловать в Фитнес</h1>
+            <div class="tabs">
+                <button class="tab active" data-tab="login">Вход</button>
+                <button class="tab" data-tab="signup">Регистрация</button>
+            </div>
+
+            <!-- Форма входа -->
+            <div id="login" class="tab-content active">
+                <form id="login-form" action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="login-email">Электронная почта</label>
+                        <input type="email" id="login-email" name="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="signup" class="tab-content">
+                <form id="signup-form" action="register.php" method="POST">
+                    <div class="form-group">
+                        <label for="signup-name">Имя</label>
+                        <input type="text" id="signup-name" name="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Электронная почта</label>
+                        <input type="email" id="signup-email" name="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Пароль</label>
+                        <input type="password" id="signup-password" name="signup-password" required>
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container nav-container">
+            <p>Сайт разработал Нуртаев Чынгыз, группа ПО_41</p>
+        </div>
+    </footer>
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="login.js"></script>
+</body>
+</html>

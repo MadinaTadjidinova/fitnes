@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес - Рекомендации</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="container nav-container">
+            <a href="./index.html" class="logo">Фитнес</a>
+            <ul class="nav-links">
+                <li><a href="#" id="logout">Выйти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Ваши фитнес-рекомендации</h1>
+            <div class="progress-container">
+                <h3>Ежедневный прогресс</h3>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0 из 8 заданий выполнено</p>
+            </div>
+            <div class="tabs">
+                <button class="tab active" data-tab="diet">План питания</button>
+                <button class="tab" data-tab="exercise">План тренировок</button>
+            </div>
+            <div id="diet" class="tab-content active">
+                <div class="recommendations-grid" id="diet-recommendations"></div>
+            </div>
+            <div id="exercise" class="tab-content">
+                <div class="recommendations-grid" id="exercise-recommendations"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+    <script src="recommendations.js"></script>
+</body>
+</html>
